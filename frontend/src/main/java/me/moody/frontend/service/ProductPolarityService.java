@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class ProductPolarityService {
 
-//    private final ProductPolarityRepository productPolarityRepository;
+    private final ProductPolarityRepository productPolarityRepository;
 }

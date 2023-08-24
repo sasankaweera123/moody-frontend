@@ -8,6 +8,5 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class ProductService {
 
-//    private final ProductRepository productRepository;
-
+    private final ProductRepository productRepository;
 }

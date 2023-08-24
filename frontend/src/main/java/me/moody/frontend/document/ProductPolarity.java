@@ -1,15 +1,18 @@
 package me.moody.frontend.document;
 
 import lombok.Data;
-import org.springframework.stereotype.Indexed;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 import java.util.List;
 
 @Data
+@Document
 public class ProductPolarity {
-//    @Id
+    @Id
     private String id;
-//    @Indexed(unique = true)
+    @Indexed(unique = true)
     private String productId;
     private List<String> polarity;
 
