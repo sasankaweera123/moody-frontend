@@ -11,9 +11,13 @@ public class Reviews {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "product_id")
     private String productId;
+    @Column(name = "review_title")
     private String title;
+    @Column(name = "review_comment")
     private String comment;
+    @Column(name = "rating")
     private int rating;
 
     public Reviews() {

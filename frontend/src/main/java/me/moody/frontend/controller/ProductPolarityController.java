@@ -5,6 +5,7 @@ import me.moody.frontend.model.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import me.moody.frontend.service.ProductPolarityService;
@@ -38,7 +39,7 @@ public class ProductPolarityController {
     }
 
     @GetMapping(path = "{id}")
-    public ResponseEntity<Response> getProductPolarityById(int id) {
+    public ResponseEntity<Response> getProductPolarityById(@PathVariable int id) {
         return ResponseEntity.ok(
                 Response.builder().timestamp(LocalDateTime.now())
                         .data(Map.of("ProductPolarity", productPolarityService.getProductPolarityById(id)))

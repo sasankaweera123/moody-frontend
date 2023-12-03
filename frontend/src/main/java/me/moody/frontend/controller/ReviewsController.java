@@ -4,6 +4,7 @@ import me.moody.frontend.model.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import me.moody.frontend.service.ReviewsService;
@@ -37,7 +38,7 @@ public class ReviewsController {
     }
 
     @GetMapping(path = "{id}")
-    public ResponseEntity<Response> getReviewsById(int id) {
+    public ResponseEntity<Response> getReviewsById(@PathVariable int id) {
         return ResponseEntity.ok(
                 Response.builder().timestamp(LocalDateTime.now())
                         .data(Map.of("Reviews", reviewsService.getReviewById(id)))

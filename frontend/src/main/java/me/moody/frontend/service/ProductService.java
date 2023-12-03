@@ -22,7 +22,7 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public Products getProductById(int id) {
+    public Products getProductById(Integer id) {
         return productRepository.findById(id).orElseThrow(() -> new IllegalStateException("Product not found for id: " + id));
     }
 

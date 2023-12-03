@@ -10,13 +10,15 @@ import lombok.Data;
 public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column(name = "product_id")
     private String productId;
     @Column(name = "product_name")
     private String productName;
     @Column(name = "product_link")
     private String productLink;
+    @Column(name = "product_image")
+    private String imageUrl;
 
     public Products() {
     }
