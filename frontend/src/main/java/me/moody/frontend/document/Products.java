@@ -23,9 +23,10 @@ public class Products {
     public Products() {
     }
 
-    public Products(String productId, String productName, String productLink) {
+    public Products(String productId, String productName, String productLink, String productImage) {
         this.productId = productId;
         this.productName = productName;
         this.productLink = productLink;
+        this.imageUrl = productImage;
     }
 }
